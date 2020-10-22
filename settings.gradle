@@ -1,0 +1,8 @@
+include ':features:apod:pub'
+include ':foundation:commons'
+include ':features:apod:wiring'
+include ':features:apod:domain'
+include ':features:rover:data'
+include ':features:apod:data'
+include ':app'
+rootProject.name = "Nasa Pics"

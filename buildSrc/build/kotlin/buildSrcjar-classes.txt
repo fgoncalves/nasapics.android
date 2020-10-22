@@ -1,0 +1,1 @@
+/Users/fredericogoncalves/AndroidStudioProjects/NasaPics/buildSrc/build/classes/kotlin/main/Libs.class

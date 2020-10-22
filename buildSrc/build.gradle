@@ -1,0 +1,18 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        mavenLocal()
+    }
+}
+
+plugins {
+    id "org.jetbrains.kotlin.jvm" version "1.4.10"
+}
+
+repositories {
+    google()
+    jcenter()
+    mavenLocal()
+}
+
