@@ -5,5 +5,9 @@
         android:id="@+id/apod"
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/title_home" />
+    <item
+        android:id="@+id/rover"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_rover_photos" />
 
 </menu>

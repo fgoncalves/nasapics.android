@@ -5,6 +5,7 @@ import android.widget.ImageView
 import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
 import com.squareup.picasso.Picasso
+import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 
 @BindingAdapter("url")
 fun ImageView.loadUrl(
@@ -15,8 +16,21 @@ fun ImageView.loadUrl(
         return
     }
 
+    val httpsUrl = url.forceHttps()
+
+    if (httpsUrl == null) {
+        setImageDrawable(null)
+        return
+    }
+
     Picasso.get()
-        .load(url)
+        .load(httpsUrl)
         .placeholder(ColorDrawable(ContextCompat.getColor(context, R.color.placeholder)))
         .into(this)
 }
+
+private fun String.forceHttps() =
+    toHttpUrlOrNull()?.newBuilder()
+        ?.scheme("https")
+        ?.build()
+        ?.toString()

@@ -34,11 +34,15 @@ android {
 }
 
 dependencies {
-    kapt Libs.moshi_codegen
+    kapt Libs.dagger_compiler
 
     implementation Libs.kotlin
-
     implementation Libs.retrofit
-    implementation Libs.moshi
-    implementation Libs.rxkotlin
+    implementation Libs.dagger
+
+    implementation project(":features:rover:data")
+    implementation project(":features:rover:domain")
+    implementation project(':features:rover:pub')
+
+    implementation project(":foundation:commons")
 }

@@ -31,14 +31,25 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        dataBinding true
+    }
 }
 
 dependencies {
-    kapt Libs.moshi_codegen
+    kapt Libs.dagger_compiler
 
     implementation Libs.kotlin
-
-    implementation Libs.retrofit
-    implementation Libs.moshi
     implementation Libs.rxkotlin
+    implementation Libs.rxandroid
+    implementation Libs.dagger
+    implementation Libs.constraint_layout
+    implementation Libs.material
+    implementation Libs.viewmodel
+    implementation Libs.recyclerview
+
+    api project(":features:rover:domain")
+
+    implementation project(":foundation:commons")
 }

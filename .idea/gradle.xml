@@ -21,6 +21,9 @@
             <option value="$PROJECT_DIR$/features/apod/wiring" />
             <option value="$PROJECT_DIR$/features/rover" />
             <option value="$PROJECT_DIR$/features/rover/data" />
+            <option value="$PROJECT_DIR$/features/rover/domain" />
+            <option value="$PROJECT_DIR$/features/rover/pub" />
+            <option value="$PROJECT_DIR$/features/rover/wiring" />
             <option value="$PROJECT_DIR$/foundation" />
             <option value="$PROJECT_DIR$/foundation/commons" />
           </set>
